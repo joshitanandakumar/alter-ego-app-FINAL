@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Major+Mono+Display&display=swap');
+
+.choose-topic {
+  background-color: #c2c3d9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.choose-topic .div-2 {
+  background-color: #c2c3d9;
+  height: 896px;
+  position: relative;
+  width: 414px;
+}
+
+.choose-topic .overlap {
+  height: 820px;
+  left: 0;
+  position: absolute;
+  top: 51px;
+  width: 414px;
+}
+
+.choose-topic .union-2 {
+  height: 755px;
+  left: 0;
+  position: absolute;
+  top: 56px;
+  width: 414px;
+}
+
+.choose-topic .rectangle {
+  background-color: #8e97fd;
+  border-radius: 10px;
+  height: 231px;
+  left: 18px;
+  position: absolute;
+  top: 166px;
+  width: 176px;
+}
+
+.choose-topic .rectangle-2 {
+  background-color: #7376a9;
+  border-radius: 10px;
+  height: 188px;
+  left: 18px;
+  position: absolute;
+  top: 632px;
+  width: 179px;
+}
+
+.choose-topic .rectangle-3 {
+  background-color: #587f9b;
+  border-radius: 10px;
+  height: 194px;
+  left: 218px;
+  position: absolute;
+  top: 129px;
+  width: 176px;
+}
+
+.choose-topic .cloudy-instance {
+  height: 118px !important;
+  left: 248px !important;
+  position: absolute !important;
+  top: 159px !important;
+  width: 115px !important;
+}
+
+.choose-topic .cloud-3 {
+  height: 55px !important;
+  left: 14px !important;
+  position: absolute !important;
+  top: 25px !important;
+  width: 86px !important;
+}
+
+.choose-topic .text-wrapper-2 {
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 162px;
+  letter-spacing: 0;
+  line-height: 24.3px;
+  position: absolute;
+  top: 61px;
+  white-space: nowrap;
+}
+
+.choose-topic .text-wrapper-3 {
+  -webkit-text-stroke: 1px #ffffff;
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 72px;
+  letter-spacing: 1.80px;
+  line-height: 24.3px;
+  position: absolute;
+  top: 350px;
+  white-space: nowrap;
+}
+
+.choose-topic .text-wrapper-4 {
+  -webkit-text-stroke: 1px #ffffff;
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 268px;
+  letter-spacing: 1.80px;
+  line-height: 24.3px;
+  position: absolute;
+  top: 279px;
+  white-space: nowrap;
+}
+
+.choose-topic .text-wrapper-5 {
+  color: #000000;
+  font-family: "Major Mono Display-Regular", Helvetica;
+  font-size: 45px;
+  font-weight: 400;
+  left: 90px;
+  letter-spacing: 0;
+  line-height: 60.8px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.choose-topic .rectangle-4 {
+  background-color: #0a0300;
+  border-radius: 10px;
+  height: 167px;
+  left: 18px;
+  position: absolute;
+  top: 434px;
+  width: 176px;
+}
+
+.choose-topic .rectangle-5 {
+  background-color: #a3b7dc;
+  border-radius: 10px;
+  height: 191px;
+  left: 218px;
+  position: absolute;
+  top: 352px;
+  width: 176px;
+}
+
+.choose-topic .group {
+  background-color: #245497;
+  border-radius: 10px;
+  height: 246px;
+  left: 218px;
+  position: absolute;
+  top: 574px;
+  width: 176px;
+}
+
+.choose-topic .group-2 {
+  height: 27px;
+  left: 16px;
+  position: relative;
+  top: 196px;
+  width: 133px;
+}
+
+.choose-topic .text-wrapper-6 {
+  color: #245497;
+  font-family: "HelveticaNeue-Bold", Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 19.5px;
+  position: absolute;
+  top: 0;
+  width: 131px;
+}
+
+.choose-topic .clear-day-instance {
+  height: 105px !important;
+  left: 58px !important;
+  position: absolute !important;
+  top: 218px !important;
+  width: 105px !important;
+}
+
+.choose-topic .sun-3 {
+  height: 79px !important;
+  left: 13px !important;
+  position: absolute !important;
+  top: 13px !important;
+  width: 79px !important;
+}
+
+.choose-topic .heavy-showers-instance {
+  height: 102px !important;
+  left: 58px !important;
+  position: absolute !important;
+  top: 440px !important;
+  width: 105px !important;
+}
+
+.choose-topic .design-component-instance-node {
+  height: 79px !important;
+  left: 13px !important;
+  top: 17px !important;
+  width: 79px !important;
+}
+
+.choose-topic .heavy-showers-2 {
+  height: 48px !important;
+  width: 79px !important;
+}
+
+.choose-topic .heavy-showers-3 {
+  height: 27px !important;
+  left: 14px !important;
+  top: 52px !important;
+  width: 52px !important;
+}
+
+.choose-topic .partly-cloudy-night-instance {
+  height: 120px !important;
+  left: 50px !important;
+  position: absolute !important;
+  top: 639px !important;
+  width: 124px !important;
+}
+
+.choose-topic .partly-cloudy-night-2 {
+  height: 80px !important;
+  left: 10px !important;
+  top: 20px !important;
+  width: 93px !important;
+}
+
+.choose-topic .partly-cloudy-night-3 {
+  height: 80px !important;
+}
+
+.choose-topic .cloud-4 {
+  height: 19px !important;
+  left: 61px !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 32px !important;
+}
+
+.choose-topic .partly-cloudy-night-4 {
+  height: 80px !important;
+  left: 10px !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 74px !important;
+}
+
+.choose-topic .partly-cloudy-night-5 {
+  height: 25px !important;
+  left: 0 !important;
+  position: absolute !important;
+  top: 48px !important;
+  width: 41px !important;
+}
+
+.choose-topic .heavy-snow-instance {
+  height: 103px !important;
+  left: 250px !important;
+  position: absolute !important;
+  top: 639px !important;
+  width: 114px !important;
+}
+
+.choose-topic .heavy-snow-2 {
+  height: 86px !important;
+  left: 22px !important;
+  top: 9px !important;
+  width: 70px !important;
+}
+
+.choose-topic .fast-winds-instance {
+  left: 234px !important;
+  position: absolute !important;
+  top: 416px !important;
+}
+
+.choose-topic .text-wrapper-7 {
+  -webkit-text-stroke: 1px #ffffff;
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 78px;
+  letter-spacing: 1.80px;
+  line-height: 24.3px;
+  position: absolute;
+  top: 555px;
+  white-space: nowrap;
+}
+
+.choose-topic .text-wrapper-8 {
+  -webkit-text-stroke: 1px #ffffff;
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 72px;
+  letter-spacing: 1.80px;
+  line-height: 24.3px;
+  position: absolute;
+  top: 775px;
+  white-space: nowrap;
+}
+
+.choose-topic .text-wrapper-9 {
+  -webkit-text-stroke: 1px #ffffff;
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 270px;
+  letter-spacing: 1.80px;
+  line-height: 24.3px;
+  position: absolute;
+  top: 769px;
+  white-space: nowrap;
+}
+
+.choose-topic .fast-winds-2 {
+  height: 60px;
+  left: 300px;
+  position: absolute;
+  top: 428px;
+  width: 69px;
+}
+
+.choose-topic .partly-cloudy-day-instance {
+  height: 109px !important;
+  left: 252px !important;
+  position: absolute !important;
+  top: 361px !important;
+  width: 107px !important;
+}
+
+.choose-topic .partly-cloudy-day-2 {
+  height: 82px !important;
+  left: 9px !important;
+  top: 14px !important;
+  width: 89px !important;
+}
+
+.choose-topic .partly-cloudy-day-3 {
+  height: 82px !important;
+}
+
+.choose-topic .sun-4 {
+  height: 82px !important;
+  left: 4px !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 80px !important;
+}
+
+.choose-topic .cloud-5 {
+  height: 36px !important;
+  left: 31px !important;
+  position: absolute !important;
+  top: 9px !important;
+  width: 58px !important;
+}
+
+.choose-topic .partly-cloudy-day-4 {
+  height: 22px !important;
+  left: 0 !important;
+  position: absolute !important;
+  top: 49px !important;
+  width: 36px !important;
+}
+
+.choose-topic .p {
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  left: 78px;
+  letter-spacing: 0;
+  line-height: 24.3px;
+  position: absolute;
+  top: 27px;
+  white-space: nowrap;
+}
