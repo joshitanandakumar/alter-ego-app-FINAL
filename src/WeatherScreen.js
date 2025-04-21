@@ -115,4 +115,4 @@ export default function WeatherScreen({ onWeatherSelect = () => {} }) {
       </div>
     </div>
   );
-}
+} 
