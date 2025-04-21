@@ -2,15 +2,6 @@ import React, { useState } from "react";
 import alterEgoMapping from "./alterEgoMapping.json";
 import WeatherScreen from "./WeatherScreen";
 
-const iconToWeatherType = {
-  ClearDay: "Sunny",
-  Cloudy: "Cloudy",
-  HeavyShowers: "Rainy",
-  HeavySnow: "Cold",
-  PartlyCloudyNight: "Foggy",
-  Group21: "Breezy",
-};
-
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedWeather, setSelectedWeather] = useState("");
@@ -18,13 +9,8 @@ function App() {
   const [energy, setEnergy] = useState("");
   const [alterEgo, setAlterEgo] = useState("");
 
-  const handleWeatherSelect = (iconLabel) => {
-    const weatherType = iconToWeatherType[iconLabel];
-    if (!weatherType) {
-      console.warn("Unknown weather icon label:", iconLabel);
-      return;
-    }
-
+  // ✅ Updated to just use weatherType directly (like "Sunny", "Cold", etc.)
+  const handleWeatherSelect = (weatherType) => {
     setSelectedWeather(weatherType);
     setCurrentStep(2);
   };
@@ -52,7 +38,9 @@ function App() {
 
   return (
     <div className="app-container" style={{ padding: "2rem", textAlign: "center" }}>
-      {currentStep === 1 && <WeatherScreen onSelect={handleWeatherSelect} />}
+      {currentStep === 1 && (
+        <WeatherScreen onWeatherSelect={handleWeatherSelect} />
+      )}
 
       {currentStep === 2 && (
         <>
@@ -81,8 +69,8 @@ function App() {
           <h2>Your Alter Ego is:</h2>
           <h1>{alterEgo}</h1>
           <p>
-            Based on a <strong>{selectedWeather}</strong> day with <strong>{energy}</strong> energy
-            and a <strong>{vibe}</strong> vibe.
+            Based on a <strong>{selectedWeather}</strong> day with{" "}
+            <strong>{energy}</strong> energy and a <strong>{vibe}</strong> vibe.
           </p>
           <button onClick={handleReset}>Try Again</button>
         </>
