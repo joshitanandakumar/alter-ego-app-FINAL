@@ -1,42 +1,78 @@
-// WeatherScreen.js
 import React from "react";
-import "./WeatherScreen.css";
+import ClearDayIcon from "./assets/clear-day.svg";
+import CloudyIcon from "./assets/cloudy.svg";
+import HeavyShowersIcon from "./assets/heavy-showers.svg";
+import HeavySnowIcon from "./assets/heavy-snow.svg";
+import PartlyCloudyNightIcon from "./assets/partly-cloudy-night.svg";
+import Group21Icon from "./assets/group-21.svg";
 
-
-const weatherOptions = [
-  { id: "sunny", label: "Sunny", bg: "sunnycard.svg", icon: "sunny.svg" },
-  { id: "rainy", label: "Rainy", bg: "rainycard.svg", icon: "rainy.svg" },
-  { id: "foggy", label: "Foggy", bg: "foggycard.svg", icon: "foggy.svg" },
-  { id: "cloudy", label: "Cloudy", bg: "cloudycard.svg", icon: "cloudy.svg" },
-  { id: "breezy", label: "Breezy", bg: "breezycard.svg", icon: "breezy.svg" },
-  { id: "cold", label: "Cold", bg: "coldcard.svg", icon: "cold.svg" },
-];
-
-const WeatherScreen = ({ selectedWeather, setSelectedWeather, onNext }) => {
-  const handleWeatherSelect = (id) => {
-    setSelectedWeather(id);
-    onNext();
-  };
-
+const WeatherScreen = ({ onSelect }) => {
   return (
-    <div className="weather-screen">
-      <h1 className="weather-title">What's the weather like?</h1>
-      <div className="weather-grid">
-        {weatherOptions.map((weather) => (
-          <button
-            key={weather.id}
-            className={`weather-card ${selectedWeather === weather.id ? "selected" : ""}`}
-            style={{ backgroundImage: `url(/images/${weather.bg})` }}
-            onClick={() => handleWeatherSelect(weather.id)}
-          >
-            <img
-              src={`/images/${weather.icon}`}
-              alt={weather.label}
-              className="weather-icon"
-            />
-            <span className="weather-label">{weather.label}</span>
-          </button>
-        ))}
+    <div className="choose-topic">
+      <div className="div-2">
+        <div className="overlap">
+          <div className="text-wrapper-5">Weather</div>
+
+          {/* SUNNY */}
+          <div className="rectangle"></div>
+          <img
+            src={ClearDayIcon}
+            alt="Clear Day"
+            className="clear-day-instance"
+            onClick={() => onSelect("ClearDay")}
+          />
+          <div className="text-wrapper-3">SUNNY</div>
+
+          {/* CLOUDY */}
+          <div className="rectangle-3"></div>
+          <img
+            src={CloudyIcon}
+            alt="Cloudy"
+            className="cloudy-instance"
+            onClick={() => onSelect("Cloudy")}
+          />
+          <div className="text-wrapper-4">CLOUDY</div>
+
+          {/* RAINY */}
+          <div className="rectangle-4"></div>
+          <img
+            src={HeavyShowersIcon}
+            alt="Heavy Showers"
+            className="heavy-showers-instance"
+            onClick={() => onSelect("HeavyShowers")}
+          />
+          <div className="text-wrapper-7">RAINY</div>
+
+          {/* BREEZY */}
+          <div className="rectangle-5"></div>
+          <img
+            src={Group21Icon}
+            alt="Breezy"
+            className="fast-winds-2"
+            onClick={() => onSelect("Group21")}
+          />
+          <div className="text-wrapper-9">BREEZY</div>
+
+          {/* FOGGY */}
+          <div className="rectangle-2"></div>
+          <img
+            src={PartlyCloudyNightIcon}
+            alt="Foggy"
+            className="partly-cloudy-night-instance"
+            onClick={() => onSelect("PartlyCloudyNight")}
+          />
+          <div className="text-wrapper-8">FOGGY</div>
+
+          {/* COLD */}
+          <div className="group"></div>
+          <img
+            src={HeavySnowIcon}
+            alt="Heavy Snow"
+            className="heavy-snow-instance"
+            onClick={() => onSelect("HeavySnow")}
+          />
+          <div className="text-wrapper-9">COLD</div>
+        </div>
       </div>
     </div>
   );
