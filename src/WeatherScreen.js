@@ -15,7 +15,6 @@ import cloudyCard from "./assets/cloudycard.svg";
 import breezyCard from "./assets/breezycard.svg";
 import coldCard from "./assets/coldcard.svg";
 
-// Ordered like your Figma layout
 const weatherOptions = [
   { label: "ClearDay", name: "Sunny", icon: ClearDayIcon, bg: sunnyCard },
   { label: "HeavyShowers", name: "Rainy", icon: HeavyShowersIcon, bg: rainyCard },
@@ -36,30 +35,20 @@ const WeatherScreen = ({ onSelect }) => {
         <p style={styles.subtitle}>like today?</p>
       </div>
 
-      <div style={styles.columnWrapper}>
-        <div style={styles.column}>
-          <WeatherCard option={weatherOptions[0]} onSelect={onSelect} width={176} height={231} />
-          <WeatherCard option={weatherOptions[1]} onSelect={onSelect} width={176} height={167} />
-          <WeatherCard option={weatherOptions[2]} onSelect={onSelect} width={176} height={188} />
-        </div>
-        <div style={styles.column}>
-          <WeatherCard option={weatherOptions[3]} onSelect={onSelect} width={176} height={194} />
-          <WeatherCard option={weatherOptions[4]} onSelect={onSelect} width={176} height={191} />
-          <WeatherCard option={weatherOptions[5]} onSelect={onSelect} width={176} height={246} />
-        </div>
+      <div style={styles.gridWrapper}>
+        {weatherOptions.map((option) => (
+          <WeatherCard key={option.label} option={option} onSelect={onSelect} />
+        ))}
       </div>
     </div>
   );
 };
 
-const WeatherCard = ({ option, onSelect, width, height }) => (
+const WeatherCard = ({ option, onSelect }) => (
   <button
-    key={option.label}
     onClick={() => onSelect(option.label)}
     style={{
       ...styles.card,
-      width,
-      height,
       backgroundImage: `url(${option.bg})`,
     }}
   >
@@ -83,7 +72,8 @@ const styles = {
     top: 0,
     left: 0,
     width: "100%",
-    height: "auto",
+    maxHeight: "40vh",
+    objectFit: "cover",
     zIndex: 0,
   },
   header: {
@@ -112,23 +102,25 @@ const styles = {
     lineHeight: "135%",
     margin: 0,
   },
-  columnWrapper: {
+  gridWrapper: {
     display: "flex",
+    flexWrap: "wrap",
     justifyContent: "center",
     gap: "1.2rem",
     position: "relative",
     zIndex: 1,
-  },
-  column: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "1rem",
   },
   card: {
     border: "none",
     borderRadius: "20px",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    width: "45vw",
+    maxWidth: "176px",
+    height: "28vh",
+    maxHeight: "246px",
+    minHeight: "167px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
