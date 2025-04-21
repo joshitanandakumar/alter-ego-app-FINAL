@@ -1,145 +1,45 @@
+// WeatherScreen.js
 import React from "react";
-import ClearDayIcon from "./assets/clear-day.svg";
-import CloudyIcon from "./assets/cloudy.svg";
-import Group21Icon from "./assets/group-21.svg";
-import HeavyShowersIcon from "./assets/heavy-showers.svg";
-import HeavySnowIcon from "./assets/heavy-snow.svg";
-import PartlyCloudyNightIcon from "./assets/partly-cloudy-night.svg";
-import UnionIcon from "./assets/Union.svg";
+import "./WeatherScreen.css";
 
-// Weather card backgrounds
-import sunnyCard from "./assets/sunnycard.svg";
-import rainyCard from "./assets/rainycard.svg";
-import foggyCard from "./assets/foggycard.svg";
-import cloudyCard from "./assets/cloudycard.svg";
-import breezyCard from "./assets/breezycard.svg";
-import coldCard from "./assets/coldcard.svg";
 
 const weatherOptions = [
-  { label: "ClearDay", name: "Sunny", icon: ClearDayIcon, bg: sunnyCard },
-  { label: "HeavyShowers", name: "Rainy", icon: HeavyShowersIcon, bg: rainyCard },
-  { label: "PartlyCloudyNight", name: "Foggy", icon: PartlyCloudyNightIcon, bg: foggyCard },
-  { label: "Cloudy", name: "Cloudy", icon: CloudyIcon, bg: cloudyCard },
-  { label: "Group21", name: "Breezy", icon: Group21Icon, bg: breezyCard },
-  { label: "HeavySnow", name: "Cold", icon: HeavySnowIcon, bg: coldCard },
+  { id: "sunny", label: "Sunny", bg: "sunnycard.svg", icon: "sunny.svg" },
+  { id: "rainy", label: "Rainy", bg: "rainycard.svg", icon: "rainy.svg" },
+  { id: "foggy", label: "Foggy", bg: "foggycard.svg", icon: "foggy.svg" },
+  { id: "cloudy", label: "Cloudy", bg: "cloudycard.svg", icon: "cloudy.svg" },
+  { id: "breezy", label: "Breezy", bg: "breezycard.svg", icon: "breezy.svg" },
+  { id: "cold", label: "Cold", bg: "coldcard.svg", icon: "cold.svg" },
 ];
 
-const WeatherScreen = ({ onSelect }) => {
+const WeatherScreen = ({ selectedWeather, setSelectedWeather, onNext }) => {
+  const handleWeatherSelect = (id) => {
+    setSelectedWeather(id);
+    onNext();
+  };
+
   return (
-    <div style={styles.container}>
-      <img src={UnionIcon} alt="Clouds" style={styles.backgroundTop} />
-
-      <div style={styles.header}>
-        <p style={styles.greeting}>Good morning, Abi. What’s the</p>
-        <h1 style={styles.weatherTitle}>WEATHER</h1>
-        <p style={styles.subtitle}>like today?</p>
-      </div>
-
-      <div style={styles.gridWrapper}>
-        {weatherOptions.map((option) => (
-          <WeatherCard key={option.label} option={option} onSelect={onSelect} />
+    <div className="weather-screen">
+      <h1 className="weather-title">What's the weather like?</h1>
+      <div className="weather-grid">
+        {weatherOptions.map((weather) => (
+          <button
+            key={weather.id}
+            className={`weather-card ${selectedWeather === weather.id ? "selected" : ""}`}
+            style={{ backgroundImage: `url(/images/${weather.bg})` }}
+            onClick={() => handleWeatherSelect(weather.id)}
+          >
+            <img
+              src={`/images/${weather.icon}`}
+              alt={weather.label}
+              className="weather-icon"
+            />
+            <span className="weather-label">{weather.label}</span>
+          </button>
         ))}
       </div>
     </div>
   );
-};
-
-const WeatherCard = ({ option, onSelect }) => (
-  <button
-    onClick={() => onSelect(option.label)}
-    style={{
-      ...styles.card,
-      backgroundImage: `url(${option.bg})`,
-    }}
-  >
-    <img src={option.icon} alt={option.name} style={styles.icon} />
-    <span style={styles.label}>{option.name.toUpperCase()}</span>
-  </button>
-);
-
-const styles = {
-  container: {
-    backgroundColor: "#c2c3d9",
-    minHeight: "100vh",
-    padding: "3rem 1.2rem 4rem",
-    textAlign: "center",
-    position: "relative",
-    fontFamily: "'Inter', sans-serif",
-    overflow: "hidden",
-  },
-  backgroundTop: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    maxHeight: "40vh",
-    objectFit: "cover",
-    zIndex: 0,
-  },
-  header: {
-    position: "relative",
-    zIndex: 1,
-    marginBottom: "2.5rem",
-    marginTop: "5rem",
-  },
-  greeting: {
-    fontSize: "18px",
-    fontWeight: 400,
-    lineHeight: "135%",
-    margin: 0,
-  },
-  weatherTitle: {
-    fontSize: "45px",
-    fontWeight: 400,
-    letterSpacing: "4px",
-    margin: "0.2rem 0",
-    lineHeight: "135%",
-    fontFamily: "'Major Mono Display', monospace",
-  },
-  subtitle: {
-    fontSize: "18px",
-    fontWeight: 400,
-    lineHeight: "135%",
-    margin: 0,
-  },
-  gridWrapper: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    gap: "1.2rem",
-    position: "relative",
-    zIndex: 1,
-  },
-  card: {
-    border: "none",
-    borderRadius: "20px",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    width: "45vw",
-    maxWidth: "176px",
-    height: "28vh",
-    maxHeight: "246px",
-    minHeight: "167px",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    cursor: "pointer",
-    boxShadow: "0px 4px 12px rgba(0,0,0,0.1)",
-  },
-  icon: {
-    width: "48px",
-    height: "48px",
-    marginBottom: "0.7rem",
-  },
-  label: {
-    color: "#ffffff",
-    fontWeight: 700,
-    fontSize: "1rem",
-    fontFamily: "'Inter', sans-serif",
-    letterSpacing: "1px",
-  },
 };
 
 export default WeatherScreen;
