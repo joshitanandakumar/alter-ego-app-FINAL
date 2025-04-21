@@ -5,73 +5,69 @@ import HeavyShowersIcon from "./assets/heavy-showers.svg";
 import HeavySnowIcon from "./assets/heavy-snow.svg";
 import PartlyCloudyNightIcon from "./assets/partly-cloudy-night.svg";
 import Group21Icon from "./assets/group-21.svg";
+import Union from "./assets/Union.svg";
 
 const WeatherScreen = ({ onSelect }) => {
   return (
-    <div className="choose-topic">
-      <div className="div-2">
-        <div className="overlap">
-          <div className="text-wrapper-5">Weather</div>
+    <div className="weather-screen">
+      <img src={Union} alt="cloud background" className="background-cloud" />
+      <h2 className="weather-header">Good morning, Abi. What’s the <span>WEATHER</span> like today?</h2>
 
-          {/* SUNNY */}
-          <div className="rectangle"></div>
-          <img
-            src={ClearDayIcon}
-            alt="Clear Day"
-            className="clear-day-instance"
-            onClick={() => onSelect("ClearDay")}
-          />
-          <div className="text-wrapper-3">SUNNY</div>
+      <div className="weather-grid">
+        <div
+          className="weather-card sunny"
+          onClick={() => onSelect("ClearDay")}
+        >
+          <img src={ClearDayIcon} alt="Sunny" className="weather-icon" />
+          <div className="weather-label">SUNNY</div>
+        </div>
 
-          {/* CLOUDY */}
-          <div className="rectangle-3"></div>
-          <img
-            src={CloudyIcon}
-            alt="Cloudy"
-            className="cloudy-instance"
-            onClick={() => onSelect("Cloudy")}
-          />
-          <div className="text-wrapper-4">CLOUDY</div>
+        <div
+          className="weather-card cloudy"
+          onClick={() => onSelect("Cloudy")}
+        >
+          <img src={CloudyIcon} alt="Cloudy" className="weather-icon" />
+          <div className="weather-label">CLOUDY</div>
+        </div>
 
-          {/* RAINY */}
-          <div className="rectangle-4"></div>
+        <div
+          className="weather-card rainy"
+          onClick={() => onSelect("HeavyShowers")}
+        >
           <img
             src={HeavyShowersIcon}
             alt="Heavy Showers"
-            className="heavy-showers-instance"
-            onClick={() => onSelect("HeavyShowers")}
+            className="weather-icon"
           />
-          <div className="text-wrapper-7">RAINY</div>
+          <div className="weather-label">RAINY</div>
+        </div>
 
-          {/* BREEZY */}
-          <div className="rectangle-5"></div>
-          <img
-            src={Group21Icon}
-            alt="Breezy"
-            className="fast-winds-2"
-            onClick={() => onSelect("Group21")}
-          />
-          <div className="text-wrapper-9">BREEZY</div>
+        <div
+          className="weather-card breezy"
+          onClick={() => onSelect("Group21")}
+        >
+          <img src={Group21Icon} alt="Breezy" className="weather-icon" />
+          <div className="weather-label">BREEZY</div>
+        </div>
 
-          {/* FOGGY */}
-          <div className="rectangle-2"></div>
+        <div
+          className="weather-card foggy"
+          onClick={() => onSelect("PartlyCloudyNight")}
+        >
           <img
             src={PartlyCloudyNightIcon}
             alt="Foggy"
-            className="partly-cloudy-night-instance"
-            onClick={() => onSelect("PartlyCloudyNight")}
+            className="weather-icon"
           />
-          <div className="text-wrapper-8">FOGGY</div>
+          <div className="weather-label">FOGGY</div>
+        </div>
 
-          {/* COLD */}
-          <div className="group"></div>
-          <img
-            src={HeavySnowIcon}
-            alt="Heavy Snow"
-            className="heavy-snow-instance"
-            onClick={() => onSelect("HeavySnow")}
-          />
-          <div className="text-wrapper-9">COLD</div>
+        <div
+          className="weather-card cold"
+          onClick={() => onSelect("HeavySnow")}
+        >
+          <img src={HeavySnowIcon} alt="Heavy Snow" className="weather-icon" />
+          <div className="weather-label">COLD</div>
         </div>
       </div>
     </div>
