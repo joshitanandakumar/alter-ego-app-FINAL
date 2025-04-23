@@ -22,7 +22,7 @@ export default function Plans({ onSelectPlan }) {
         />
 
         {/* Header - brought even further down */}
-        <div className="flex flex-col items-center justify-center w-full z-10 relative mt-[5vh] mb-[4vh]">
+        <div className="flex flex-col items-center justify-center w-full z-10 relative mt-[7vh] mb-[4vh]">
           <img src={whatKindOf} alt="What kind of" className="w-[20%] mb-[2vh]" />
           <img src={plans} alt="Plans" className="w-[120px] mb-[2vh]" />
           <img src={areLinedUp} alt="Are lined up?" className="w-[20%]" />

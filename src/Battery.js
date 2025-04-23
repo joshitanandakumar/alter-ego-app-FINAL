@@ -27,14 +27,14 @@ export default function Battery({ onEnergySelect }) {
         />
 
         {/* Header text */}
-        <div className="flex flex-col items-center justify-center w-full z-10 relative mt-[5vh] mb-[5vh] space-y-4">
+        <div className="flex flex-col items-center justify-center w-full z-10 relative mt-[7vh] mb-[5vh] space-y-4">
           <img src={howSThat} alt="How's that" className="w-[17%]" />
           <img src={socialBattery} alt="Social Battery" className="w-[85%]" />
           <img src={looking} alt="Looking" className="w-[14%]" />
         </div>
 
         {/* Slider + label + button */}
-        <div className="z-10 relative flex flex-col items-center justify-center mt-[25vh]">
+        <div className="z-10 relative flex flex-col items-center justify-center mt-[21vh]">
         <div className="flex justify-center items-end h-[260px]">
         <input
   type="range"
