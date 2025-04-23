@@ -96,7 +96,8 @@ function App() {
       )}
 
       {currentStep === 4 && (
-        <div className="min-h-screen bg-[#143768] flex flex-col items-center text-white text-center font-sans relative pt-12 overflow-hidden">
+        <div className="min-h-screen bg-[#143768] flex flex-col justify-center items-center text-white text-center font-sans px-4 relative overflow-hidden">
+
           {/* Text content moved up */}
           <div className="absolute top-12 flex flex-col items-center space-y-6 text-center px-4">
             <h2
