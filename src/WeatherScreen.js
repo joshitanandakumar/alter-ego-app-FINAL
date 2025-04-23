@@ -77,7 +77,7 @@ export default function WeatherScreen({ onWeatherSelect = () => {} }) {
         />
 
         {/* Header */}
-        <div className="pt-2 pb-4 px-4 text-center z-10 relative">
+        <div className="pt-12 pb-4 px-4 text-center z-10 relative">
           <p className="text-black text-sm font-light mb-1">
             Good morning, Abi. What’s the
           </p>
